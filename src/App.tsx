@@ -1,10 +1,10 @@
-
+import Mainlayout from "./layouts/mainlayout/Mainlayout"
 
 function App() {
 
   return (
     <>
-      hello
+      <Mainlayout/>
     </>
   )
 }

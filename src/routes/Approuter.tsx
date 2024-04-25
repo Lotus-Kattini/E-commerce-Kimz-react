@@ -9,13 +9,17 @@ import Errorpage from "@pages/error/Errorpage"
 import { Routes,Route } from "react-router-dom"
 
 const Approuter = () => {
+  
   return (
     <Routes>
       <Route path="/*" element={<Errorpage/>}/>
       <Route path="/" element={<Mainlayout/>}>
         <Route path="/home" element={<Home/>}/>
         <Route path="/categories" element={<Categories/>}/>
-        <Route path="/products/:prefix" element={<Products/>}/>
+        <Route path="products/:prefix" element={<Products/>} loader={()=>{
+          console.log('first')
+          return true
+        }}/>
         <Route path="/about-us" element={<Aboutus/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/register" element={<Register/>}/>

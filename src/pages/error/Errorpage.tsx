@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom'
 import './style.css'
+import { Container } from 'react-bootstrap'
 const Errorpage = () => {
   
   return (
+    <Container>
     <div>
       <div className='goback'>
   <Link to={'/'} className='link' replace={true}>Go to Home Page</Link>
@@ -330,6 +332,7 @@ const Errorpage = () => {
   </a>
   
     </div>
+    </Container>
   )
 }
 

@@ -11,7 +11,6 @@ import { Route,createBrowserRouter,createRoutesFromElements,RouterProvider } fro
 const Approuter = () => {
   const root=createBrowserRouter(createRoutesFromElements(
     <>
-    
     {/* <Route path="/*" element={<Errorpage/>}/> */}
       <Route path="/" element={<Mainlayout/>} errorElement={<Errorpage/>}>
         <Route path="/home" element={<Home/>}/>

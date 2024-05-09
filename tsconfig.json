@@ -21,6 +21,7 @@
       "@assets/*": ["src/assets/*"],
       "@components/*": ["src/components/*"],
       "@hooks/*": ["src/hooks/*"],
+      "@customTypes/*":["src/types/*"],
       "@pages/*": ["src/pages/*"],
       "@routes/*": ["src/routes/*"],
       "@store/*": ["src/store/*"],

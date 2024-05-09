@@ -1,10 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
 import actGetcategories from "./act/ActGetcategories";
+import { TCategory } from "@customTypes/Category";
+import { TLoading } from "@customTypes/Shares";
 
 interface ICategoriesState{
     //{}[] this means the array is array of objects => the type of the records is array of objects
-    records:{id:number,title:string,prefix:string,img:string}[],
-    loading:'idle' | 'pending' | 'succeeded' | 'failed',
+    records:TCategory[],
+    loading:TLoading,
     error:string | null,
 }
 

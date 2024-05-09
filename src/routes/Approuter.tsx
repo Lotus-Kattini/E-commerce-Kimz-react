@@ -15,7 +15,7 @@ const Approuter = () => {
       <Route path="/" element={<Mainlayout/>} errorElement={<Errorpage/>}>
         <Route path="/home" element={<Home/>}/>
         <Route path="/categories" element={<Categories/>}/>
-        <Route path="products/:prefix" element={<Products/>} loader={({params})=>{
+        <Route path="categories/products/:prefix" element={<Products/>} loader={({params})=>{
           if(typeof params.prefix !== 'string' || !/^[a-z]+$/i.test(params.prefix)){
             throw new Response('Bad request',{
               status:400,

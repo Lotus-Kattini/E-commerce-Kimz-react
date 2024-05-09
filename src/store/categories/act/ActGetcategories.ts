@@ -1,8 +1,9 @@
+import { TCategory } from "@customTypes/Category";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 //we can use the interface but the better approatch is when we want to declare only one thing not object we use the type
-type TResponse={id:number,title:string,prefix:string,img:string}[]
+type TResponse=TCategory[]
 
 
 //categories this is the name if the CategoriesSlice
@@ -12,7 +13,7 @@ const actGetcategories=createAsyncThunk('categories/actGetcategories',async (_,t
     const {rejectWithValue}=thunkAPI
 
     try {
-        const res=await axios.get<TResponse>('http://localhost:5005/category');
+        const res=await axios.get<TResponse>('http://localhost:5005/categories');
         const data=res.data
         return data
 
